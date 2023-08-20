@@ -1,0 +1,106 @@
+<!-- appointment_form.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Appointment Form</title>
+</head>
+<style>
+  .nav1{
+    display: flex;
+  justify-content: center;
+  background-color: #666;
+  padding: 1rem;
+  }
+  nav ul li{
+  display: inline-block;
+  }
+  nav ul li a{
+    padding: 15px;
+    font-size: 1rem;
+    color:#004caa ;
+    font-weight: 600;
+  }
+  nav ul li a:hover{
+    color: #fc5185;
+  }
+
+  
+</style>
+<body>
+  <div class="nav1">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">About</a></li>
+        <li><a href="index.html">Services</a></li>
+        <li><a href="index.html">Team</a></li>
+        <li><a href="index.html">Gallary</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="appointment_wrapper">
+  <h1>Appointment Form</h1>
+
+  <form action="appointment.php" method="post">
+    <input type="hidden" name="action" value="submit">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="enter your name here" required>
+  
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+      <option value="">Select gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+  
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" placeholder="enter your number here" pattern="[0-9]{11}" required>
+  
+    <label for="dob">pick a date:</label>
+    <input type="date" id="dob" name="dob" required>
+  
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" placeholder="enter your address here" required></textarea>
+  
+    <label for="email">Ema<input type="email" id="email" name="email" placeholder="enter your e-mail here" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+
+  
+    <label for="previous-attendance">Have you previously attended our facility?</label>
+    <input type="radio" id="yes" name="previous-attendance" value="yes" required>
+    <label for="yes">Yes</label>
+    <input type="radio" id="no" name="previous-attendance" value="no" required>
+    <label for="no">No</label>
+
+    <label for="doctor_select">Select a Doctor:</label>
+    <select id="doctor_select" name="doctor_select" required>
+      <option value="">Select doctor here</option>
+      <option value="Dr. John Doe">Dr. John Doe</option>
+      <option value="Dr. Jane Smith">Dr. Jane Smith</option>
+      <option value="Dr. Robert Johnson">Dr. Robert Johnson</option>
+
+    </select>
+  
+    <label for="appointment-type">Appointment type:</label>
+    <select id="appointment-type" name="appointment-type" required>
+      <option value="">Select appointment type</option>
+      <option value="cleaning">Cleaning</option>
+      <option value="checkup">Checkup</option>
+      <option value="filling">Filling</option>
+      <option value="root-canal">Root canal</option>
+    </select>
+  
+    <button type="submit">Submit</button>
+  </form>
+  </div>
+  
+</body>
+
+</html>
+
+
